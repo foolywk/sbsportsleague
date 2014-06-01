@@ -8,6 +8,10 @@ var express = require('express'),
   http = require('http'),
   path = require('path'),
   engines = require('consolidate');
+  clientSecrets = require('./client_secrets.json');
+  mcapi = require('mailchimp-api');
+  mc = new mcapi.Mailchimp(clientSecrets.web.mcapiKey);
+  list_id = clientSecrets.web.mcListId;
 
 var app = module.exports = express();
 
@@ -39,6 +43,25 @@ if (app.get('env') === 'production') {
 //mailchimp stuff
 //app.post('/subscribe', api.subscribe);
 //app.post('/mail', api.mail);
+
+// Email Registration
+app.post('/signup', function (req, res) {
+
+    // mailchimp subscribe
+      if (req.body && req.body.EMAIL) {
+      mc.lists.subscribe({id: list_id, email:{email:req.body.EMAIL}}, function(data) {
+          // res.contentType('json');
+          // res.send({response:'success'});
+        },
+        function(error) {
+          // res.contentType('json');
+          // res.send({response:error.error});
+      });
+  } else {
+    res.send({response:'could not find email'});
+  }
+   res.render('success'); 
+});
 
 // redirect all routes to index
 app.get('*', routes.index);

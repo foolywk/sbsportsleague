@@ -7,7 +7,7 @@
     "jade": "~0.31.2",
     "consolidate": "~0.10.x",
     "mustache": "~0.8.x",
-    "mailchimp-api": "~2.0.x",
+    "mailchimp-api": "~2.0.4",
     "nodemailer": "~0.6.x"
   },
   "engines": {
