@@ -1,0 +1,16 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "~3.2.x",
+    "jade": "~0.31.2",
+    "consolidate": "~0.10.x",
+    "mustache": "~0.8.x",
+    "mailchimp-api": "~2.0.x",
+    "nodemailer": "~0.6.x"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
