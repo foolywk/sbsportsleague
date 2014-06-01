@@ -10,8 +10,8 @@ var express = require('express'),
   engines = require('consolidate');
   clientSecrets = require('./client_secrets.json');
   mcapi = require('mailchimp-api');
-  mc = new mcapi.Mailchimp(clientSecrets.web.mcapiKey);
-  list_id = clientSecrets.web.mcListId;
+  mc = new mcapi.Mailchimp(clientSecrets.mcapiKey);
+  list_id = clientSecrets.mcListId;
 
 var app = module.exports = express();
 
@@ -60,7 +60,6 @@ app.post('/signup', function (req, res) {
   } else {
     res.send({response:'could not find email'});
   }
-   res.render('success'); 
 });
 
 // redirect all routes to index
