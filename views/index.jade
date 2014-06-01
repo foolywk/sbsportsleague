@@ -21,6 +21,7 @@ head
   body#page-top(data-spy='scroll', data-target='.navbar-custom')
 
     // NAVBAR
+    
     nav.navbar.navbar-custom.navbar-fixed-top(role='navigation')
       .container
         .navbar-header.page-scroll
@@ -53,6 +54,7 @@ head
          /.container 
 
     // INTRO     
+    
     section.intro
         .intro-body
             .container
@@ -86,7 +88,8 @@ head
                     a.btn.btn-circle(href='#about')
                       i.fa.fa-angle-double-down.animated
 
-    // WHAT WE DO               
+    // ABOUT              
+    
     section#about.container.content-section.text-center
       .row
         .col-lg-8.col-lg-offset-2
@@ -97,8 +100,8 @@ head
           p
             | We provide a community for entrepreneurial-minded students who share an interest in creative innovation - a productive and collaborative environment for business people, developers, and everyone in between to connect and share their talents. 
 
-                      
-
+    // WHAT WE DO 
+    
     section#whatwedo.content-section.text-center(style='background-color:#f1f1f1; color:#000')
       .whatwedo-section
         .container
@@ -115,7 +118,8 @@ head
           
             a.project-image
                 img(src='http://placehold.it/300x200')                                                
-
+    // TEAM 
+    
     section#team.content-section.text-center
       .container
         .row
@@ -169,6 +173,9 @@ head
             li(data-target='#myCarousel', data-slide-to='0')
             li.active(data-target='#myCarousel', data-slide-to='1')    
 
+
+    // BLOG
+    
     section#blog.content-section.text-center
       .blog-section
         .container     
@@ -176,17 +183,20 @@ head
             script(async='async', src='https://static.medium.com/embed.js')
             a.m-profile(href='https://medium.com/@BruinEntrepreneurs', data-width='100%', data-border='false',background-color='#f1f1f1') Bruin Entrepreneurs                             
 
-
-    section#contact.container.content-section.text-center(style='height:200px')  
+    // CONTACT
+    
+    section#contact.container.content-section.text-center  
       .row
-        .col-lg-8.col-lg-offset-2            
-          h2 Contact Us
-          p
-            | Lets make something happen. 
-          p contact@bruinentrepreneurs.org
+        .col-lg-8.col-lg-offset-2
+          h3 Lets make something happen                    
+          a.btn.btn-default.btn-lg(href='mailto:contact@bruinentrepreneurs.org') Contact Us
+          br
+      .signature 
+        p Bruin Entrepreneurs 2014
+    // MAP 
+    
+    #map   
 
-
-    #map
     //
        Core JavaScript Files 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
