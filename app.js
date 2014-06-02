@@ -53,7 +53,7 @@ if (app.get('env') === 'production') {
 // Mailchimp Email Registration
 app.post('/signup', function (req, res) {
 
-    // mailchimp subscribe
+     // mailchimp subscribe
       if (req.body && req.body.EMAIL) {
       mc.lists.subscribe({id: list_id, email:{email:req.body.EMAIL}}, function(data) {
           // res.contentType('json');
@@ -73,7 +73,7 @@ app.post('/sendMail', function (req, res) {
 
     var mailOptions = {
         from: req.body.email, 
-        to: "contact@bruinentrepreneurs.org", // list of receivers
+        to: "brandon@bruinentrepreneurs.org", // list of receivers
         subject: req.body.name + ": " + req.body.subject, // Subject line
         generateTextFromHTML: true,
         html: req.body.message + 
@@ -83,14 +83,14 @@ app.post('/sendMail', function (req, res) {
     }
     
     transport.sendMail(mailOptions, function(error, response){
-        if(error){
+        if(error) {
             console.log(error);
-        }else{
+        } else {
             console.log("Message sent: " + response.message);
         }
         transport.close(); // shut down the connection pool, no more messages
     }); 
-
+    res.render('mailConfirmation')
 });
 
 

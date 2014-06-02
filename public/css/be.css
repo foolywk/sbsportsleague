@@ -14,9 +14,19 @@
     background-color: #fff;
 }
 
+.subscribeConfirmation {
+    display: none;
+    position: absolute;
+    height:50px;
+    top: 270px;
+    text-align: center;
+}
+
+
 #about {
     background-color:#f1f1f1; 
-    color:#000
+    color:#000;
+    margin-bottom:50px;
 }
 
 #whatwedo {
@@ -27,9 +37,9 @@
 .whatwedo-section {
     width: 100%;
     padding: 50px 0;
-    color: #fff;
-    background: url(../img/whatwedo_bg.jpg) no-repeat center center scroll;
-    background-color: #000;
+    color: #000;
+    /* background: url(../img/whatwedo_bg.jpg) no-repeat center center scroll; */
+    background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -76,9 +86,10 @@
 }
 
 .project-image {
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 10px;
+   height:200px; 
+   background-size: cover; 
+   background-position: center;
+   background-repeat: no-repeat; 
 }
 
 .project-image:hover {
@@ -352,7 +363,6 @@ a:focus {
 
     #map {
         height: 400px;
-    
     }
 }
 
