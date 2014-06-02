@@ -188,11 +188,27 @@ head
     section#contact.container.content-section.text-center  
       .row
         .col-lg-8.col-lg-offset-2
-          h3 Lets make something happen                    
-          a.btn.btn-default.btn-lg(href='mailto:contact@bruinentrepreneurs.org') Contact Us
+          h2 Contact Us  
+        .col-lg-10.col-lg-offset-1
+          form( action="/sendMail", method="POST", enctype="multipart/form-data")
+           br
+           ul.col-lg-5(style='font-size:13pt; list-style-type:none')
+             li
+               input#name.name(type='text', name='name', placeholder='Name', required='required')
+             li
+               input#email.email(type='email', name='email', placeholder='Email Address', required='required') 
+             li
+               input#subject.subject(type='text', name='subject', placeholder='Subject', required='required')                              
+           ul.col-lg-7(style='font-size:13pt; list-style-type:none')
+             li
+               textarea#message.message(name='message', placeholder='Enter Your Message...', style='height:100px', required='required')
+           .col-lg-12
+           br
+           input.btn.btn-default.btn-lg(type="submit", value="Send")
+
           br
       .signature 
-        p Bruin Entrepreneurs 2014
+        p © Bruin Entrepreneurs 2014. All Rights Reserved. 
     // MAP 
     
     #map   
