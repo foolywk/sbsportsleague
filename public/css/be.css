@@ -92,7 +92,10 @@
    background-repeat: no-repeat; 
 }
 
-.project-image:hover {
+.project-overlay {
+    height: inherit;
+    width: inherit;
+    background-color: rgba(0,0,0,0.6);
 }
 
 .carousel-indicators, .carousel-control {

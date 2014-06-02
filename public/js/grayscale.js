@@ -1,3 +1,18 @@
+
+jQuery(document).ready(function($){
+      //portfolio - show link
+      $('.project-overlay').hover(
+          function () {
+              $(this).animate({opacity:'1'});
+              $('.project-subtitle').animate({opacity:'1'});
+          },
+          function () {
+              $(this).animate({opacity:'0'});
+              $('.project-subtitle').animate({opacity:'0'});
+          }
+      ); 
+  });
+
 //jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {

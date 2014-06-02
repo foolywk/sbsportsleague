@@ -117,18 +117,27 @@ body#page-top(data-spy='scroll', data-target='.navbar-custom')
           .col-lg-12(style='margin-top:25px')
               
               // BRUIN INCUBATOR
-              .col-lg-4(style='padding-bottom:10px')
-                .project-image(style='background-image: url(\'/img/bruinincubator2.jpg\'')   
+              .col-lg-4(style='padding-bottom:20px')
+                .project-image(style='background-image: url(\'/img/bruinincubator.jpg\'') 
+                    .project-overlay(style='opacity: 0')
+                        .project-image(style='opacity:0.8; background-image: url(\'/img/bruinincubator2.jpg\'') 
+                        h5 Bruin Incubator            
               
               // LA HACKS
-              .col-lg-4(style='padding-bottom:10px')
-                .project-image(style='background-image: url(\'/img/lahacks2.png\'')  
-              
-              // PERFECT PITCH 
-              .col-lg-4(style='padding-bottom:10px')
-                .project-image(style='background-image: url(\'/img/perfectpitch.jpg\'')
+              .col-lg-4(style='padding-bottom:20px')
+                .project-image(style='background-image: url(\'/img/lahacks.jpg\'')  
+                    .project-overlay(style='opacity: 0;', target='_blank')
+                        a(href='http://lahacks.com')
+                            .project-image(style='opacity:0.8; background-image: url(\'/img/lahacks2.png\'') 
+                        h5 LA Hacks 
 
-                               
+              // PERFECT PITCH 
+              .col-lg-4(style='padding-bottom:20px')
+                .project-image(style='background-image: url(\'/img/perfectpitch.jpg\'')
+                    .project-overlay(style='opacity: 0;')
+                        a(href='http://perfectpitch.io', target='_blank')
+                            .project-image(style='opacity:0.8; background-image: url(\'/img/perfectpitch2.jpg\'') 
+                        h5 Perfect Pitch: UCLA's Biggest Pitch Competition   
     // TEAM 
     
     section#team.content-section.text-center
