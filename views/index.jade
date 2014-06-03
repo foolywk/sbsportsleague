@@ -112,7 +112,8 @@ body#page-top(data-spy='scroll', data-target='.navbar-custom')
     section#whatwedo.whatwedo-section.content-section.text-center(style='background-color:#fff')
         .container
           .col-lg-8.col-lg-offset-2
-            h2 What We Do 
+            h2.section-header What We Do
+            p.section-subtitle We make opportunities for students to learn, build, and create.
           
           .col-lg-12(style='margin-top:25px')
               
@@ -152,41 +153,87 @@ body#page-top(data-spy='scroll', data-target='.navbar-custom')
           .carousel-inner
             // 2013-2014 Board
             .item
-              .fill(style='background-image: url(\'http://placehold.it/1200x300\'); height:400px')
-                li.list-inline
-                    a.team-image
-                        img(src='http://placehold.it/150x150')
-                  
-                    a.team-image
-                        img(src='http://placehold.it/150x150')     
-                  
-                    a.team-image
-                        img(src='http://placehold.it/150x150') 
-
-                    a.team-image
-                        img(src='http://placehold.it/150x150')
-
-              .carousel-caption
-                h3 2013-2014 Founding Board
-            
+              .fill(style='height:400px')
+                h4 2013-2014 Founding Board
+                // DAVID
+                .col-lg-3.col-md-3.col-sm-6.team-container
+                  .team-image(style='background-image: url(\'/img/team/david.jpg\'')
+                      .team-overlay(style='opacity: 0')
+                          // a(href='', target='_blank')
+                          .team-image
+                            h4.team-name David Mangold
+                            h5 Founder | Bruin Incubator
+                // JAMES
+                .col-lg-3.col-md-3.col-sm-6.team-container
+                  .team-image(style='background-image: url(\'/img/team/james.jpg\'') 
+                      .team-overlay(style='opacity: 0')
+                          a(href='https://twitter.com/jamesl1919', target='_blank')  
+                            .team-image
+                              h4.team-name James Liu
+                              h5 President                           
+                // BRANDON
+                .col-lg-3.col-md-3.col-sm-6.team-container
+                  .team-image(style='background-image: url(\'/img/team/brandon.jpg\'')  
+                      .team-overlay(style='opacity: 0;')
+                          a(href='https://twitter.com/foolywk', target='_blank')  
+                            .team-image
+                              h4.team-name Brandon Foo
+                              h5 EVP | Perfect Pitch, LA Hacks
+                // NISH
+                .col-lg-3.col-md-3.col-sm-6.team-container
+                  .team-image(style='background-image: url(\'/img/team/nish.jpg\'') 
+                      .team-overlay(style='opacity: 0')
+                          a(href='https://twitter.com/nishil92', target='_blank')  
+                            .team-image
+                              h4.team-name Nish Patel
+                              h5 EVP                              
+                // VARADH
+                .col-lg-3.col-md-3.col-sm-6.team-container
+                  .team-image(style='background-image: url(\'/img/team/varadh.jpg\'')
+                      .team-overlay(style='opacity: 0;')                    
+                          a(href='https://twitter.com/hdarav', target='_blank')  
+                            .team-image
+                              h4.team-name Varadh Jain
+                              h5 IVP | LA Hacks
+                // STEPHANIE
+                .col-lg-3.col-md-3.col-sm-6.team-container
+                  .team-image(style='background-image: url(\'/img/team/stephanie.jpg\'') 
+                      .team-overlay(style='opacity: 0')
+                          a(href='https://twitter.com/stephsutanto', target='_blank')  
+                            .team-image
+                              h4.team-name Stephanie Sutanto
+                              h5 Education Director | Bruin Incubator
+                // SHAHAN
+                .col-lg-3.col-md-3.col-sm-6.team-container
+                  .team-image(style='background-image: url(\'/img/team/shahan.jpg\'')  
+                      .team-overlay(style='opacity: 0')
+                            // a(href='http://lahacks.com')
+                            .team-image
+                              h4.team-name Shahan Khan
+                              h5 Director of Education
+                // JUSTIN 
+                .col-lg-3.col-md-3.col-sm-6.team-container
+                  .team-image(style='background-image: url(\'/img/team/justin.jpg\'')
+                      .team-overlay(style='opacity: 0;')
+                          a(href='https://twitter.com/senseibrezh', target='_blank')  
+                            .team-image
+                              h4.team-name Justin Brezhnev
+                              h5 Director of Marketing | LA Hacks, Perfet Pitch
+                // ARCHIT
+                .col-lg-3.col-md-3.col-sm-6.team-container
+                  .team-image(style='background-image: url(\'/img/team/archit.jpg\'')  
+                      .team-overlay(style='opacity: 0;', target='_blank')
+                          a(href='https://twitter.com/gargstuttgart', target='_blank')  
+                            .team-image
+                              h4.team-name Archit Garg
+                              h5 Treasurer
+  
             // 2014-2015 Board
             .item.active
-              .fill(style='background-image: url(\'http://placehold.it/1200x300\'); height:400px')
-                li.list-inline
-                    a.team-image
-                        img(src='http://placehold.it/150x150')
-                  
-                    a.team-image
-                        img(src='http://placehold.it/150x150')     
-                  
-                    a.team-image
-                        img(src='http://placehold.it/150x150') 
+              .fill(style='height:400px')
+                h4 2014-2015 Executive Board
 
-                    a.team-image
-                        img(src='http://placehold.it/150x150')
                   
-              .carousel-caption
-                h3 2014-2015 Executive Board
           //
             Indicators 
           ol.carousel-indicators
@@ -251,5 +298,13 @@ body#page-top(data-spy='scroll', data-target='.navbar-custom')
       interval: false //changes the speed
       })
 
+    <!-- GOOGLE ANALYTICS -->
+    script
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-44941514-1', 'bruinentrepreneurs.org');
+        ga('send', 'pageview');    
 
 
