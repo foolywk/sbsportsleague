@@ -121,8 +121,13 @@
     background-color: rgba(0,0,0,0.6);
 }
 
-.carousel-indicators, .carousel-control {
+.carousel-indicators li {
+    border-color: #000;
     position: relative;
+}
+
+.carousel-indicators .active {
+    background-color: #000;
 }
 
 .signature {
