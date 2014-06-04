@@ -121,27 +121,35 @@ body#page-top(data-spy='scroll', data-target='.navbar-custom')
           .col-lg-12(style='margin-top:25px')
               
               // BRUIN INCUBATOR
-              .col-lg-4(style='padding-bottom:20px')
-                .project-image(style='background-image: url(\'/img/bruinincubator.jpg\'') 
+              .col-lg-6(style='padding-bottom:60px')
+                .project-image(style='background-image: url(\'/img/bruinincubator.jpg\')') 
                     .project-overlay(style='opacity: 0')
-                        .project-image(style='opacity:0.8; background-image: url(\'/img/bruinincubator2.jpg\'') 
-                        h5 Bruin Incubator            
+                        a(href='http://bruinincubator.com')
+                            .project-image(style='opacity:0.8; background-image: url(\'/img/bruinincubator2.jpg\')') 
+                        h5 Bruin Incubator          
               
               // LA HACKS
-              .col-lg-4(style='padding-bottom:20px')
-                .project-image(style='background-image: url(\'/img/lahacks.jpg\'')  
+              .col-lg-6(style='padding-bottom:60px')
+                .project-image(style='background-image: url(\'/img/lahacks.jpg\')')  
                     .project-overlay(style='opacity: 0;', target='_blank')
                         a(href='http://lahacks.com')
-                            .project-image(style='opacity:0.8; background-image: url(\'/img/lahacks2.png\'') 
+                            .project-image(style='opacity:0.8; background-image: url(\'/img/lahacks2.png\')') 
                         h5 LA Hacks 
 
               // PERFECT PITCH 
-              .col-lg-4(style='padding-bottom:20px')
-                .project-image(style='background-image: url(\'/img/perfectpitch.jpg\'')
+              .col-lg-6(style='padding-bottom:20px')
+                .project-image(style='background-image: url(\'/img/perfectpitch.jpg\')')
                     .project-overlay(style='opacity: 0;')
                         a(href='http://perfectpitch.io', target='_blank')
-                            .project-image(style='opacity:0.8; background-image: url(\'/img/perfectpitch2.jpg\'') 
+                            .project-image(style='opacity:0.8; background-image: url(\'/img/perfectpitch2.jpg\')') 
                         h5 Perfect Pitch: UCLA's Biggest Pitch Competition   
+              // STARTUP FAIR
+              .col-lg-6(style='padding-bottom:20px')
+                .project-image(style='background-image: url(\'/img/perfectpitch.jpg\')')
+                    .project-overlay(style='opacity: 0;')
+                        a(href='http://perfectpitch.io', target='_blank')
+                            .project-image(style='opacity:0.8; background-image: url(\'/img/perfectpitch2.jpg\')') 
+                        h5 Startup Fair
     // TEAM 
     
     section#team.content-section.text-center
@@ -156,78 +164,139 @@ body#page-top(data-spy='scroll', data-target='.navbar-custom')
           .carousel-inner
             // 2013-2014 Board
             .item
-              .fill(style='height:400px')
+              .fill(style='height:750px')
                 h4 2013-2014 Founding Board
                 // DAVID
-                .col-lg-3.col-md-3.col-sm-6.team-container
+                .col-lg-4.col-md-4.col-sm-6.team-container
                   
-                    .team-image(style='background-image: url(\'/img/team/david.jpg\'')
+                    .team-image(style='background-image: url(\'/img/team/david.jpg\')')
                       .team-overlay(style='opacity: 0')
                         h4.team-name David Mangold
                         h5 Founder
                 // JAMES
-                .col-lg-3.col-md-3.col-sm-6.team-container
+                .col-lg-4.col-md-4.col-sm-6.team-container
                   a(href='https://twitter.com/jamesl1919', target='_blank')  
-                    .team-image(style='background-image: url(\'/img/team/james.jpg\'') 
+                    .team-image(style='background-image: url(\'/img/team/james.jpg\')') 
                       .team-overlay(style='opacity: 0')      
                         h4.team-name James Liu
                         h5 President                           
                 // BRANDON
-                .col-lg-3.col-md-3.col-sm-6.team-container
+                .col-lg-4.col-md-4.col-sm-6.team-container
                   a(href='https://twitter.com/foolywk', target='_blank')  
-                    .team-image(style='background-image: url(\'/img/team/brandon.jpg\'')  
+                    .team-image(style='background-image: url(\'/img/team/brandon.jpg\')')  
                       .team-overlay(style='opacity: 0;')
                         h4.team-name Brandon Foo
                         h5 EVP
                 // NISH
-                .col-lg-3.col-md-3.col-sm-6.team-container
+                .col-lg-4.col-md-4.col-sm-6.team-container
                   a(href='https://twitter.com/nishil92', target='_blank') 
-                    .team-image(style='background-image: url(\'/img/team/nish.jpg\'') 
+                    .team-image(style='background-image: url(\'/img/team/nish.jpg\')') 
                       .team-overlay(style='opacity: 0') 
                         h4.team-name Nish Patel
                         h5 EVP                              
                 // VARADH
-                .col-lg-3.col-md-3.col-sm-6.team-container
+                .col-lg-4.col-md-4.col-sm-6.team-container
                   a(href='https://twitter.com/hdarav', target='_blank')                   
-                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\'')
+                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
                       .team-overlay(style='opacity: 0;')                    
                         h4.team-name Varadh Jain
                         h5 IVP
                 // STEPHANIE
-                .col-lg-3.col-md-3.col-sm-6.team-container
+                .col-lg-4.col-md-4.col-sm-6.team-container
                   a(href='https://twitter.com/stephsutanto', target='_blank')  
-                    .team-image(style='background-image: url(\'/img/team/stephanie.jpg\'') 
+                    .team-image(style='background-image: url(\'/img/team/stephanie.jpg\')') 
                       .team-overlay(style='opacity: 0')
                         h4.team-name Stephanie Sutanto
                         h5 Director of Education
                 // SHAHAN
-                .col-lg-3.col-md-3.col-sm-6.team-container
+                .col-lg-4.col-md-4.col-sm-6.team-container
                     
-                    .team-image(style='background-image: url(\'/img/team/shahan.jpg\'')  
+                    .team-image(style='background-image: url(\'/img/team/shahan.jpg\')')  
                       .team-overlay(style='opacity: 0')  
                         h4.team-name Shahan Khan
                         h5 Director of Education
                 // JUSTIN 
-                .col-lg-3.col-md-3.col-sm-6.team-container
+                .col-lg-4.col-md-4.col-sm-6.team-container
                   a(href='https://twitter.com/senseibrezh', target='_blank')  
-                    .team-image(style='background-image: url(\'/img/team/justin.jpg\'')
+                    .team-image(style='background-image: url(\'/img/team/justin.jpg\')')
                       .team-overlay(style='opacity: 0;')
                         h4.team-name Justin Brezhnev
                         h5 Director of Marketing
                 // ARCHIT
-                .col-lg-3.col-md-3.col-sm-6.team-container
+                .col-lg-4.col-md-4.col-sm-6.team-container
                   a(href='https://twitter.com/gargstuttgart', target='_blank') 
-                    .team-image(style='background-image: url(\'/img/team/archit.jpg\'')  
+                    .team-image(style='background-image: url(\'/img/team/archit.jpg\')')  
                       .team-overlay(style='opacity: 0;', target='_blank')
                         h4.team-name Archit Garg
                         h5 Treasurer
   
             // 2014-2015 Board
             .item.active
-              .fill(style='height:400px')
+              .fill(style='height:750px')
                 h4 2014-2015 Executive Board
-
-                  
+                // VARADH
+                .col-lg-4.col-md-4.col-sm-6.team-container
+                  a(href='https://twitter.com/hdarav', target='_blank')                   
+                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
+                      .team-overlay(style='opacity: 0;')                    
+                        h4.team-name Varadh Jain
+                        h5 President
+                // JOE
+                .col-lg-4.col-md-4.col-sm-6.team-container
+                  a(href='https://twitter.com/JosephDiMaria', target='_blank')                   
+                    .team-image(style='background-image: url(\'/img/team/joe.jpg\')')
+                      .team-overlay(style='opacity: 0;')                    
+                        h4.team-name Joe DiMaria
+                        h5 IVP
+                // PETER
+                .col-lg-4.col-md-4.col-sm-6.team-container
+                  a(href='https://twitter.com/hdarav', target='_blank')                   
+                    .team-image(style='background-image: url(\'/img/team/peter.jpg\')')
+                      .team-overlay(style='opacity: 0;')                    
+                        h4.team-name Peter Shao
+                        h5 EVP
+                // ARUSHI
+                .col-lg-4.col-md-4.col-sm-6.team-container
+                  a(href='https://twitter.com/hdarav', target='_blank')                   
+                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
+                      .team-overlay(style='opacity: 0;')                    
+                        h4.team-name Arushi Tainwala
+                        h5 VP of Events
+                // STEPHANIE
+                .col-lg-4.col-md-4.col-sm-6.team-container
+                  a(href='https://twitter.com/stephsutanto', target='_blank')  
+                    .team-image(style='background-image: url(\'/img/team/stephanie.jpg\')') 
+                      .team-overlay(style='opacity: 0')
+                        h4.team-name Stephanie Sutanto
+                        h5 Startup Director
+                // ADITYA
+                .col-lg-4.col-md-4.col-sm-6.team-container
+                  a(href='https://twitter.com/hdarav', target='_blank')                   
+                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
+                      .team-overlay(style='opacity: 0;')                    
+                        h4.team-name Aditya Aggarwal
+                        h5 Finance Director
+                // DYLAN
+                .col-lg-4.col-md-4.col-sm-6.team-container
+                  a(href='https://twitter.com/hdarav', target='_blank')                   
+                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
+                      .team-overlay(style='opacity: 0;')                    
+                        h4.team-name Dylan Ler
+                        h5 Secretary
+                // DANIEL
+                .col-lg-4.col-md-4.col-sm-6.team-container
+                  a(href='https://twitter.com/hdarav', target='_blank')                   
+                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
+                      .team-overlay(style='opacity: 0;')                    
+                        h4.team-name Daniel Graupensperger
+                        h5 Marketing Director
+                // NISH
+                .col-lg-4.col-md-4.col-sm-6.team-container
+                  a(href='https://twitter.com/nishil92', target='_blank') 
+                    .team-image(style='background-image: url(\'/img/team/nish.jpg\')') 
+                      .team-overlay(style='opacity: 0') 
+                        h4.team-name Nish Patel
+                        h5 HackCamp Director
           //
             Indicators 
           ol.carousel-indicators
