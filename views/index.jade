@@ -5,369 +5,208 @@ head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='description', content='')
     meta(name='author', content='')
-    title Bruin Entrepreneurs | Undergraduate Entrepreneurship at UCLA
-    
+    title Silicon Beach Sports League
+
     // FB Meta Tags
-    meta(property="og:image", content="/img/BEavatar.jpg")
-    meta(property="og:title", content="Bruin Entrepreneurs | Undergraduate Entrepreneurship at UCLA")
+    meta(property="og:image", content="img/")
+    meta(property="og:title", content="Silicon Beach Sports League")
 
-    // Bootstrap Core CSS 
-    link(href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet', type='text/css')
-    
-    // Fonts 
-    link(href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', rel='stylesheet', type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', rel='stylesheet', type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
-    
-    // Custom Theme CSS 
-    link(href='css/be.css', rel='stylesheet')   
+    //
+       Bootstrap Core CSS 
+    link(href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    //
+       Fonts 
+    link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css", rel="stylesheet")
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300', rel='stylesheet', type='text/css')
+    //
+       Custom Theme CSS 
+    link(href='css/sbsl.css', rel='stylesheet')
+    // 
+       Favicon
+    link(href='img/favicon.ico', rel="shortcut icon")
 
-body#page-top(data-spy='scroll', data-target='.navbar-custom')
-
-    // NAVBAR
-    
-    nav.navbar.navbar-custom.navbar-fixed-top(role='navigation')
-      .container
-        .navbar-header.page-scroll
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
-            i.fa.fa-bars
-          a.navbar-brand(href='#page-top')
-            img(src='img/navbarlogo.png')
-        //
-           Collect the nav links, forms, and other content for toggling 
-        .collapse.navbar-collapse.navbar-right.navbar-main-collapse
-          ul.nav.navbar-nav
-            //
-               Hidden li included to remove active class from about link when scrolled up past about section 
-            li.hidden
-              a(href='#page-top')
-            li.page-scroll
-              a(href='#about') About
-            li.page-scroll
-              a(href='#whatwedo') What We Do
-            li.page-scroll
-              a(href='#team') Team 
-            li.page-scroll
-              a(href='#blog') Blog                                 
-            li.page-scroll
-              a(href='#contact') Contact
-        //
-           /.navbar-collapse 
-      //
-         /.container 
-
-    // INTRO     
-    
-    section.intro
-        .intro-body
-            .container
-              .row
-                .col-md-12
-                  img.logo(src='img/BEdark_noBG2.png')
-                  h3
-                    br
-                    | Undergraduate Entrepreneurship at UCLA 
-                  
-                  // Social Links 
-                  ul.list-inline.banner-social-buttons
-                    li
-                      a.btn.btn-homepage.btn-lg(href='https://twitter.com/bruinentreprenr', target='_blank')
-                        i.fa.fa-twitter.fa-fw
-                        span.network-name 
-                    li
-                      a.btn.btn-homepage.btn-lg(href='https://facebook.com/bruinentrepreneurs', target='_blank')
-                        i.fa.fa-facebook.fa-fw  
-                        span.network-name   
-                  
-                  // div container for fading elements
-                  div(style='height:50px')
-                      
-                      // nodemailer form   
-                      form.subscriptionForm(action='/signup', method='post', name='email registration', style='margin-top:20px')
-                        input.email(type='email', value='', name='EMAIL', placeholder='Enter Email Address...', required='required', style='max-width:400px; margin-right:20px')
-                        // real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                        div(style='position: absolute; left: -5000px;')
-                          input(type='text', name='b_95fffc4eb179e8cedecfbc026_469fdeb0f2', value='')
-                        input.btn.btn-homepage.btn-lg.button.subscribe-btn(type='submit', value='Subscribe', name='subscribe', style='width:200px', onclick='$(".subscriptionForm").fadeOut(); $(".subscribeConfirmation").fadeIn()')                                      
-
-                      .col-lg-12.subscribeConfirmation
-                        p Thanks for subscribing to our mailing list! You will receive a confirmation email shortly.   
-
-                  // Page Scroll Button
-                  .page-scroll
-                    a.btn.btn-circle(href='#about')
-                      i.fa.fa-angle-double-down.animated
-
-    // ABOUT              
-    
-    section#about.container.content-section.text-center
-      .row
-        .col-lg-8.col-lg-offset-2
-          h2 About Bruin Entrepreneurs
-          p
-            | Founded in 2013, Bruin Entrepreneurs’ core mission is to facilitate entrepreneurship among UCLA undergraduates by providing resources, networking, and mentorship. Our aim is to assist students of all majors and levels of experience in starting their own businesses by providing educational facilities designed to introduce students to the basics of entrepreneurship through involvement and execution.
-
-          p
-            | We provide a community for entrepreneurial-minded students who share an interest in creative innovation - a productive and collaborative environment for business people, developers, and everyone in between to connect and share their talents. 
-
-    // WHAT WE DO 
-    
-    section#whatwedo.whatwedo-section.content-section.text-center(style='background-color:#fff')
+    /////////////
+    /// INTRO ///
+    /////////////
+    header#page-top.intro
+      .intro-body
         .container
-          .col-lg-8.col-lg-offset-2
-            h2.section-header What We Do
-            h4.section-subtitle We make opportunities for Bruins to learn, build, and create
+          video#intro-video(autoplay='autoplay', loop='loop', poster='volleyball.jpg')
+            source(src='video/volleyball.mp4', type='video/mp4')
+            source(src='video/volleyball.webm', type='video/webm')   
           
-          .col-lg-12(style='margin-top:25px')
-              
-              // BRUIN INCUBATOR
-              .col-lg-6(style='padding-bottom:60px')
-                .project-image(style='background-image: url(\'/img/bruinincubator.jpg\')') 
-                    .project-overlay(style='opacity: 0')
-                        a(href='http://bruinincubator.com')
-                            .project-image(style='opacity:0.8; background-image: url(\'/img/bruinincubator2.jpg\')') 
-                        h5 Bruin Incubator          
-              
-              // LA HACKS
-              .col-lg-6(style='padding-bottom:60px')
-                .project-image(style='background-image: url(\'/img/lahacks.jpg\')')  
-                    .project-overlay(style='opacity: 0;', target='_blank')
-                        a(href='http://lahacks.com')
-                            .project-image(style='opacity:0.8; background-image: url(\'/img/lahacks2.png\')') 
-                        h5 LA Hacks 
+          .row
+            .col-md-8.col-md-offset-2
+              image.intro-logo(src="/img/SBSL-Logo.png")
+              h2.intro-text
+                | LA's Premier Sports League for Startups
 
-              // PERFECT PITCH 
-              .col-lg-6(style='padding-bottom:20px')
-                .project-image(style='background-image: url(\'/img/perfectpitch.jpg\')')
-                    .project-overlay(style='opacity: 0;')
-                        a(href='http://perfectpitch.io', target='_blank')
-                            .project-image(style='opacity:0.8; background-image: url(\'/img/perfectpitch2.jpg\')') 
-                        h5 Perfect Pitch: UCLA's Biggest Pitch Competition   
-              // STARTUP FAIR
-              .col-lg-6(style='padding-bottom:20px')
-                .project-image(style='background-image: url(\'/img/perfectpitch.jpg\')')
-                    .project-overlay(style='opacity: 0;')
-                        a(href='http://perfectpitch.io', target='_blank')
-                            .project-image(style='opacity:0.8; background-image: url(\'/img/perfectpitch2.jpg\')') 
-                        h5 Startup Fair
-    // TEAM 
-    
-    section#team.content-section.text-center
-      .container
+          .row
+            ul.nav.navbar-nav
+              //
+                 Hidden li included to remove active class from about link when scrolled up past about section 
+              li.hidden
+                a(href='#page-top')
+              li.page-scroll
+                a(href='#about') About
+              li.page-scroll
+                a(href='#faq') FAQ
+              li.page-scroll
+                a(href='#feedback') Schedule
+              li.page-scroll
+                a(href='#contact') Contact 
+  
+    /////////////
+    /// ABOUT ///
+    /////////////    
+    section#about.container
+      .row
+        .col-lg-8.col-lg-offset-2 
+          h2.section-heading about              
+          p
+            | By college students, for college students. 
+          p
+            | We wanted to communicate comfortably and conveniently with other college students around us, but there was nothing out there, so we created it. We hope you find this as helpful as we have; its made our college experience that much better. #whateveryoudo #dontgraduate
+          p
+            | Start and pop conversations with only students around you. It’s local communication done right. 
+          p(style='font-size:20pt')
+            | Be 
+            b anonymous
+            |, or just be 
+            b you
+            | . Anywhere. Anytime.
+          p 
+            | Set your distance. Reach who you want to reach. It’s your community, and it’s your content. spop provides the platform for you to make your college experience that much better.
+          p
+            span(style='font-size:20pt') Nothing 
+            |is permanent. Why should your conversations be? spops pop when you leave. Or you can pop them yourself. Once they've 
+            span(style='font-size:20pt') popped
+            |, they're gone for good!
+          p
+            | Whether you're in a classroom, out in the quad, near the frat/sorority houses, or off-campus, you set your distance, and you control the content.
+          p
+            | spop away and always be in the know. 
+
+    ///////////
+    /// FAQ ///
+    ///////////
+    section#faq.container
         .row
           .col-lg-8.col-lg-offset-2
-            h2 Our Team
+            h1.section-heading FAQ
+            p
+              b What is spop?
+              br  
+              | Just read our 
+              a(href='#about') about 
+              | page!
+            p
+              b Why do I need my Facebook and College .edu email?
+              br
+              | Do you want to be talking to weirdos? Didn’t think so. We want you to have that tight knit, college community life with you, wherever you go. Once you verify your college email, that’s it, we will never EVER ask for it again. Its just a way for us to make sure we’re dealing with college students. That’s it. So go spop what your heart desires!
+            p
+              b How does one spop? 
+              br
+              | Click the compose icon at the top right of your screen. But a deeper answer would be spop about anything. Spop about your nightlife, what’s happening in your dorm/apartment, what’s going on at campus center, a clever/witty phrase, literally anything (as long as its good, wholesome stuff).
+            p
+              b How do I delete a spop? 
+              br
+              | Your spops get deleted by 1 of 3 ways. You can swipe left to “MY SPOPS” and/or “PRIVATE SPOPS” and manually pop them by clicking the pop option. You can leave your spop’s radius, but this will NOT pop your “PRIVATE SPOPS” because there is no distance associated with them (You’ll have to manually pop “PRIVATE SPOPS”). Lastly, if your spop has zero activity for a span of 24 hours, no one likes old, boring conversations...so they go bye-bye. Avoid it, by making your spops zesty (yes, we used zesty-its rare you get a chance to toss in a word like zesty), but anyways, sprinkle some zest to your spops for maximum activity.  
+            p
+              b What does set your distance do? 
+              br
+              | You reach who you want to reach; you narrow your audience. If you only want to message people in your dorm/apartment, set it. If you want to reach the whole school, set it. Its there so you can maximize your engagement within your spops.
+            p
+              b Can I spop anywhere? 
+              br
+              | Of course, we don’t limit your spops to just your school! Spop when you’re back home, when you’re at other colleges, at the beach, majestically running through a flower field. Plus, other college students in that area can spop in at anytime. Let’s be honest, the college life shouldn’t just end when you leave campus. 
+            p
+              b Can I screenshot a spop? 
+              br
+              | You can, but everyone will know about it. When you screenshot, your public profile and name will show along with a message that you screenshotted. We do this to protect the genuine, honest content within each spop.
+            p  
+              b How can I show my unconditional love and support for Spop?
+              br
+              | Come join our team of 2,200 campus reps! We’d love to interview you and have you represent the college student body!
+            p
+              b How to become a campus rep?
+              br 
+              | Shoot us an email at 
+              a(href='mailto:campusreps@spopapp.com') campusreps@spopapp.com
+              | and we’ll shoot you over some stuff so you can get to know us better and vice versa. 
+            p
+              b How do I get a shout out on spop’s Instagram, Facebook, Twitter, etc?
+              br
+              | We’re pretty picky with our reposts. So if you believe in your spop shout out and its solid, we’ll gladly repost. If its not, then keep trying! It has to fall into one of these categories: clever, funny, sweet, unique, gold.
+            p 
+              b How do I private message someone? 
+              br
+              | You can only private message people if they are public, you can’t message anonymous people because...well that defeats the purpose of being anonymous! Just click on someone’s profile and the message option will be in the middle, then private message away :)
+            p
+              b How do I report someone? 
+              br
+              | Just click on the profile of whoever posted a bad vibe and click the report button. We’ll take care of it on our end; they won’t be making that rookie mistake again. 
 
-        #myCarousel.carousel.slide
-          //
-            Wrapper for slides 
-          .carousel-inner
-            // 2013-2014 Board
-            .item
-              .fill(style='height:750px')
-                h4 2013-2014 Founding Board
-                // DAVID
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  
-                    .team-image(style='background-image: url(\'/img/team/david.jpg\')')
-                      .team-overlay(style='opacity: 0')
-                        h4.team-name David Mangold
-                        h5 Founder
-                // JAMES
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/jamesl1919', target='_blank')  
-                    .team-image(style='background-image: url(\'/img/team/james.jpg\')') 
-                      .team-overlay(style='opacity: 0')      
-                        h4.team-name James Liu
-                        h5 President                           
-                // BRANDON
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/foolywk', target='_blank')  
-                    .team-image(style='background-image: url(\'/img/team/brandon.jpg\')')  
-                      .team-overlay(style='opacity: 0;')
-                        h4.team-name Brandon Foo
-                        h5 EVP
-                // NISH
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/nishil92', target='_blank') 
-                    .team-image(style='background-image: url(\'/img/team/nish.jpg\')') 
-                      .team-overlay(style='opacity: 0') 
-                        h4.team-name Nish Patel
-                        h5 EVP                              
-                // VARADH
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/hdarav', target='_blank')                   
-                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
-                      .team-overlay(style='opacity: 0;')                    
-                        h4.team-name Varadh Jain
-                        h5 IVP
-                // STEPHANIE
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/stephsutanto', target='_blank')  
-                    .team-image(style='background-image: url(\'/img/team/stephanie.jpg\')') 
-                      .team-overlay(style='opacity: 0')
-                        h4.team-name Stephanie Sutanto
-                        h5 Director of Education
-                // SHAHAN
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                    
-                    .team-image(style='background-image: url(\'/img/team/shahan.jpg\')')  
-                      .team-overlay(style='opacity: 0')  
-                        h4.team-name Shahan Khan
-                        h5 Director of Education
-                // JUSTIN 
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/senseibrezh', target='_blank')  
-                    .team-image(style='background-image: url(\'/img/team/justin.jpg\')')
-                      .team-overlay(style='opacity: 0;')
-                        h4.team-name Justin Brezhnev
-                        h5 Director of Marketing
-                // ARCHIT
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/gargstuttgart', target='_blank') 
-                    .team-image(style='background-image: url(\'/img/team/archit.jpg\')')  
-                      .team-overlay(style='opacity: 0;', target='_blank')
-                        h4.team-name Archit Garg
-                        h5 Treasurer
-  
-            // 2014-2015 Board
-            .item.active
-              .fill(style='height:750px')
-                h4 2014-2015 Executive Board
-                // VARADH
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/hdarav', target='_blank')                   
-                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
-                      .team-overlay(style='opacity: 0;')                    
-                        h4.team-name Varadh Jain
-                        h5 President
-                // JOE
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/JosephDiMaria', target='_blank')                   
-                    .team-image(style='background-image: url(\'/img/team/joe.jpg\')')
-                      .team-overlay(style='opacity: 0;')                    
-                        h4.team-name Joe DiMaria
-                        h5 IVP
-                // PETER
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/hdarav', target='_blank')                   
-                    .team-image(style='background-image: url(\'/img/team/peter.jpg\')')
-                      .team-overlay(style='opacity: 0;')                    
-                        h4.team-name Peter Shao
-                        h5 EVP
-                // ARUSHI
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/hdarav', target='_blank')                   
-                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
-                      .team-overlay(style='opacity: 0;')                    
-                        h4.team-name Arushi Tainwala
-                        h5 VP of Events
-                // STEPHANIE
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/stephsutanto', target='_blank')  
-                    .team-image(style='background-image: url(\'/img/team/stephanie.jpg\')') 
-                      .team-overlay(style='opacity: 0')
-                        h4.team-name Stephanie Sutanto
-                        h5 Startup Director
-                // ADITYA
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/hdarav', target='_blank')                   
-                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
-                      .team-overlay(style='opacity: 0;')                    
-                        h4.team-name Aditya Aggarwal
-                        h5 Finance Director
-                // DYLAN
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/hdarav', target='_blank')                   
-                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
-                      .team-overlay(style='opacity: 0;')                    
-                        h4.team-name Dylan Ler
-                        h5 Secretary
-                // DANIEL
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/hdarav', target='_blank')                   
-                    .team-image(style='background-image: url(\'/img/team/varadh.jpg\')')
-                      .team-overlay(style='opacity: 0;')                    
-                        h4.team-name Daniel Graupensperger
-                        h5 Marketing Director
-                // NISH
-                .col-lg-4.col-md-4.col-sm-6.team-container
-                  a(href='https://twitter.com/nishil92', target='_blank') 
-                    .team-image(style='background-image: url(\'/img/team/nish.jpg\')') 
-                      .team-overlay(style='opacity: 0') 
-                        h4.team-name Nish Patel
-                        h5 HackCamp Director
-          //
-            Indicators 
-          ol.carousel-indicators
-            li(data-target='#myCarousel', data-slide-to='0')
-            li.active(data-target='#myCarousel', data-slide-to='1')    
+    ////////////////
+    /// FEEDBACK ///
+    ////////////////
+    section#feedback.container
+        .row
+          .col-lg-8.col-lg-offset-2
+            h1.section-heading feedback
+            p
+              | Help us improve, we’re always open to changes! 
+              br
+              | Shoot us an email at 
+              a(href='mailto:support@spopapp.com') support@spopapp.com
+
+    ///////////////
+    /// CONTACT ///
+    ///////////////
+    section#contact.container
+        .row
+          .col-lg-8.col-lg-offset-2
+            h1.section-heading contact
+            p
+              | Whether its to say hey, I love you, you suck, coffee, you’ve changed my life, I want to join spop, or anything else under the sun. 
+              br
+              | Good or bad, haters or lovers, we want to hear it all! 
+              a(href='mailto:contact@spopapp.com') contact@spopapp.com             
 
 
-    // BLOG
-    
-    section#blog.content-section.text-center
-      .blog-section
-        .container     
-            // Medium Embed Script     
-            script(async='async', src='https://static.medium.com/embed.js')
-            a.m-profile(href='https://medium.com/@BruinEntrepreneurs', data-width='100%', data-border='false',background-color='#f1f1f1') Bruin Entrepreneurs                             
+   
+    //////////////
+    /// FOOTER ///
+    //////////////
+    include footer
 
-    // CONTACT
-    
-    section#contact.container.content-section.text-center  
-      .row
-        .col-lg-8.col-lg-offset-2
-          h2 Contact Us  
-        .col-lg-10.col-lg-offset-1
-          form( action="/sendMail", method="POST", enctype="multipart/form-data")
-           br
-           ul.col-lg-5(style='font-size:13pt; list-style-type:none')
-             li
-               input#name.name(type='text', name='name', placeholder='Name', required='required')
-             li
-               input#email.email(type='email', name='email', placeholder='Email Address', required='required') 
-             li
-               input#subject.subject(type='text', name='subject', placeholder='Subject', required='required')                              
-           ul.col-lg-7(style='font-size:13pt; list-style-type:none')
-             li
-               textarea#message.message(name='message', placeholder='Enter Your Message...', style='height:100px', required='required')
-           .col-lg-12
-           br
-           input.btn.btn-default.btn-lg(type="submit", value="Send")
-
-          br
-      .signature 
-        p © Bruin Entrepreneurs 2014. All Rights Reserved. 
-    
-    // MAP 
-    
-    #map   
-    
-    // Core JavaScript Files 
+    //
+       Core JavaScript Files 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
-    script(src='js/bootstrap.js')
+    script(src='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js')
     script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
 
-    // Google Maps API Key - You will need to use your own API key to use the map feature 
-    script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDxATCRqFRnAiDgW8CIae3iMTJsEOBBkeg&sensor=false')
-
-    // Custom Theme JavaScript 
-    script(src='js/grayscale.js')            
-    
-    // Script to Activate the Carousel 
     script
-      $('.carousel').carousel({
-      interval: false //changes the speed
-      })
+        $(function() {
+          $('video').cover({
+          ratio: 1080 / 1920
+          });
+          $(window).resize(function() {
+          $('video').cover('set');
+          });
+          });
 
-    <!-- GOOGLE ANALYTICS -->
+    //
+      Google Analytics
     script
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-44941514-1', 'bruinentrepreneurs.org');
-        ga('send', 'pageview');    
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+      (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-53667883-1', 'spop.in');
+      ga('send', 'pageview');
 
-
+    //
+       Custom Theme JavaScript 
+    script(src='js/sbsl.js')   
+    script(src='js/jquery.cover.js')

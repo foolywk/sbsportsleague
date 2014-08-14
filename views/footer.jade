@@ -1,0 +1,50 @@
+section#footer.container
+      .row 
+        .page-scroll
+          a.btn.footer-scroll(href='#page-top')
+            i.fa.fa-angle-double-up.fa-4.animated     
+      .row
+        .col-lg-5.col-lg-offset-2
+          ul.list-inline.banner-social-buttons
+            li
+              a.btn.btn-default.btn-circle.btn-social(href="http://facebook.com/spopapp", target="_blank")
+                i.fa.fa-facebook.fa-fw.icon-social            
+              a.btn.btn-default.btn-circle.btn-social(href='https://twitter.com/spopapp', target='_blank')
+                i.fa.fa-twitter.fa-fw.icon-social
+              a.btn.btn-default.btn-circle.btn-social(href='http://instagram.com/spopapp', target='_blank')
+                i.fa.fa-instagram.fa-fw.icon-social
+              a.btn.btn-default.btn-circle.btn-social(href='http://spopapp.tumblr.com', target='_blank')
+                i.fa.fa-tumblr.fa-fw.icon-social
+              a.btn.btn-default.btn-circle.btn-social(href='https://www.youtube.com/channel/UCAbs-g6rxa_q3wAyn6Nv9TA', target='_blank')
+                i.fa.fa-youtube.fa-fw.icon-social
+              a.btn.btn-default.btn-circle.btn-social(href='https://www.pinterest.com/spopapp', target='_blank')
+                i.fa.fa-pinterest.fa-fw.icon-social                  
+     
+          .footer-download        
+            a( href='https://itunes.apple.com', target='itunes_store')
+              image.btn-download(src='/img/appstore-badge.png')
+            image.btn-download(src='/img/googleplay-badge.png')     
+
+        .col-lg-8.col-lg-offset-2
+          ul.nav.navbar-nav.footer-nav
+            //
+               Hidden li included to remove active class from about link when scrolled up past about section 
+            li.hidden
+              a(href='#page-top')
+            li.page-scroll
+              a(href='#about') About
+            li.page-scroll
+              a(href='#faq') FAQ
+            li.page-scroll
+              a(href='#feedback') Feedback
+            li.page-scroll
+              a(href='#contact') Contact    
+            li
+              a(href='/banfaq') Ban FAQ                
+            li
+              a(href="/terms") Terms
+            li 
+              a(href="/privacy") Privacy
+        .col-lg-8.col-lg-offset-2
+          .copyright
+            | © 2014 Spop, Inc. Made with ❤︎ in Los Angeles.        
