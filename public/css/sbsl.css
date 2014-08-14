@@ -216,18 +216,8 @@ video {
 }
 
 @media(max-width:991px) {
-    .intro-iphone {
-        height: 0;
-    }
-    #slideshow {
-        height: 0;
-    }
-    .slideshow-screenshot {
-        height: 0;
-    }
-    .slideshow-caption {
+    video {
         display: none;
-        height: 0;
     }
 }
 
@@ -244,6 +234,7 @@ video {
     position: relative;
     overflow: hidden;
     vertical-align: middle;
+    background-image:url('../img/volleyball.png') ;
 }
 
 .brand-heading {
