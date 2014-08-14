@@ -1,13 +1,9 @@
-@font-face {
-    font-family: Avenir;
-    src: url(../fonts/Avenir.ttc);
-}
 
 body {
     width: 100%;
     height: 100%;
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 
@@ -23,14 +19,15 @@ h4,
 h5,
 h6 {
     margin: 0 0 35px;
-    font-family: Avenir, 'Open Sans';
+    font-family:'Lato';
     font-weight: 500;
     color: #5F5F5F;
     letter-spacing: 1px;
 }
 
 p {
-    font-family: Avenir, 'Open Sans';
+    font-family: 'Lato';
+    font-weight: 300;
     margin: 0 0 25px;
     font-size: 18px;
     line-height: 1.5;
@@ -66,7 +63,7 @@ a:focus {
 }
 
 .nav {
-    width: 330px;
+    width: 320px;
     display: block;
     margin-top: 10px;
     margin-right: auto;
@@ -89,7 +86,7 @@ a:focus {
 .navbar {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
-    font-family: Avenir, 'Open Sans';
+    font-family: 'Lato';
     background-color: #fff;
 }
 
@@ -161,7 +158,8 @@ a:focus {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    font-family: Avenir, 'Open Sans';
+    font-family: 'Lato';
+    font-weight: 700;
     color: #fffafa;
     /* background-image: linear-gradient(-1deg, #c01e2e 0%, #e24857 100%); */
     
@@ -175,7 +173,7 @@ a:focus {
     max-width: 80%;
     max-height: 40%;
     margin-top: 30%;
-    margin-bottom:10%;
+    margin-bottom:5%;
 }
 /*
 #intro-video {
@@ -258,8 +256,8 @@ video {
 
 .intro-text {
     font-size: 24px;
-    font-weight: 100;
-    margin-top: 10px;
+    font-weight: 300;
+    margin-top: 0px;
     margin-bottom: 25px;
     color: #fffafa;
 }
@@ -377,14 +375,7 @@ video {
     border-top-color: #A0AFBB;
 }
 
-.spop-divider {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 50px;
-    background: url(../img/spop-divider.png) no-repeat center;
-}
-
-#about, #banfaq, #feedback, #terms, #privacy{
+#about, #faq{
     width: 100%;
     padding-top: 20px;
     padding-bottom: 40px;
@@ -392,7 +383,7 @@ video {
     background-color: #fff
 }
 
-#faq, #contact {
+#schedule, #partners, #contact {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 40px;
@@ -401,16 +392,75 @@ video {
 
 }
 
+#schedule {
+    padding-bottom: 40px;
+    color: #fff;
+    background-image: url(../img/background.jpg);
+    background-size: fill;
+    background-position:;
+    height: auto;
+    text-align: center;
+}
+
+#schedule a {
+    color: #fff;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;    
+}
+
+#schedule a:hover {
+    color: rgba(0,0,0,0.5);
+}
+
+.white {
+    color: #fff !important;
+}
+
+.map-marker {
+    font-size: 75px;
+    text-shadow: none !important;
+    margin-bottom: 40px;
+}
+
+.villagecare-logo {
+    width: auto;
+    opacity: 0.75;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.villagecare-logo:hover{
+    opacity: 1;
+}
+
+.partner-logo {
+    width: 200px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.75;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;    
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
 #terms li {
-    font-family: Avenir, 'Open Sans';
+    font-family: 'Lato';
     font-size: 18px;
 }
 
 #footer {
     width:100%;
     color: #fffafa;
-    font-family: Avenir, 'Open Sans';
-    background-image: linear-gradient(-1deg, #e24857 0%, #c01e2e 100%);
+    font-family: 'Lato';
+    background-color: #5DBCD2;
     margin-top: -10px;
     padding-top:40px;
 }
@@ -457,16 +507,30 @@ video {
 }
 
 .heart {
-    font-family: Avenir, 'Open Sans';
+    font-family: 'Lato';
 }
 
 .section-heading {
+    display: block;
     margin-top: 35px;
     margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
     color:#5F5F5F;
-    font-size:40px;
+    font-size: 40px;
     font-weight:500;
     letter-spacing: -1px;
+    max-width: 400px;
+    text-align: center;
+
+}
+
+.section-subheading {
+    display: block;
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .content-section {
@@ -488,7 +552,7 @@ video {
 
 .btn {
     text-transform: uppercase;
-    font-family: Avenir, 'Open Sans';
+    font-family: 'Lato';
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -512,15 +576,17 @@ video {
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #fffafa;
+    border: 2px solid #fffafa;
     outline: 0;
     color: #000;
     background-color: #fffafa;
 }
 
 .btn-huge {
-    padding: 25px;
-    font-size: 26px;
+    border-width: 2px;
+    padding: 10px 15px 10px 15px;
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .banner-social-buttons {
