@@ -153,8 +153,7 @@ a:focus {
 }
 
 .intro {
-    display: table;
-    width: 100%;
+    display: table;    width: 100%;
     height: auto;
     padding: 100px 0;
     text-align: center;
@@ -170,7 +169,7 @@ a:focus {
 }
 
 .intro-logo {
-    max-width: 80%;
+    max-width: 60%;
     max-height: 40%;
     margin-top: 30%;
     margin-bottom:5%;
