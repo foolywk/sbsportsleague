@@ -39,8 +39,17 @@ body
               image.intro-logo(src="/img/SBSL-Logo.png")
               h2.intro-text
                 | LA'S PREMIER SPORTS LEAGUE FOR STARTUPS
-              p  
-                a.btn.btn-default.btn-huge(href='mailto:hello@sbsportsleague.com?subject=Sign Me Up!') REGISTER    
+              
+              // mailchimp form   
+              form(action='/subscribe', method='post', name='email registration', target='_blank', style='margin-top:20px')
+                input.email(type='email', value='', name='EMAIL', placeholder='Subscribe to our mailing list...', required='required', style="margin: 0 auto; width:50%; border-color: rgba(255,255,255,0.75); border-width:3px")
+                // anti-spam
+                div(style='position: absolute; left: -5000px;')
+                  input(type='text', name='b_95fffc4eb179e8cedecfbc026_469fdeb0f2', value='')
+                .clear
+                br
+                input.btn.btn-huge.button(type='submit', value='Subscribe', name='subscribe', style='width:200px')
+              br
           .row
             ul.nav.navbar-nav
               //
@@ -76,9 +85,18 @@ body
           h1.section-heading.white Week 1
           h3.section-subheading.white VOLLEYBALL TOURNAMENT
           p
-            b.section-subheading August 24 | Hermosa Beach, CA
+            b.section-subheading August 24 | Hermosa Beach Pier, CA
           p  
-            a.btn.btn-default.btn-huge(href='mailto:hello@sbsportsleague.com?subject=Sign Me Up!') REGISTER
+            // nodemailer form   
+            form(action='/signup', method='post', name='email registration', target='_blank', style='margin-top:20px')
+              input.email(type='email', value='', name='EMAIL', placeholder='Enter Email Address...', required='required', style="margin: 0 auto; width:50%; border-color: rgba(255,255,255,0.75); border-width:3px")
+              // anti-spam
+              div(style='position: absolute; left: -5000px;')
+                input(type='text', name='b_95fffc4eb179e8cedecfbc026_469fdeb0f2', value='')
+              .clear
+              br
+              input.btn.btn-huge.button(type='submit', value='sign up', name='subscribe', style='width:200px')
+            br
           br
           p
             b.section-subheading 8 Teams | 4 Players Per Team | $250 Entry Per Team
@@ -96,20 +114,36 @@ body
           .col-lg-8.col-lg-offset-2
             h1.section-heading FAQ
             h4.section-subheading Frequently Asked Questions
-            p 
-              b Who can play?
-              p Teams should consist of at least four players, and everyone on your company team should be either a founder, board member, employee, investor, or contractor.
-            p
-              b How does the tournament work? 
-              p The tournament will have a double-elimination structure. There will be an entry fee of $250 per team - 100% of proceeds not used for the event are donated to the nonprofit organization 
-                a(href='http://villagecare.com' , target='_blank') Village Care 
-                |to support international humanitarian efforts. 
-            p
-              b What should I bring? 
-              p Bring suntan lotion and your game face! Volleyballs will be provided! Please rep your company swag! Bring friends and family to come watch you play and enjoy the fun!
-            p
-              b Will refreshments be provided? 
-              p Light snacks and water will be provided to keep you fueled for the game!              
+            .col-lg-4   
+              p
+                b Who can play?
+                p Teams should consist of at least four players, and everyone on your company team should be either a founder, board member, employee, investor, or significant other.
+            .col-lg-4
+              p
+                b How does the tournament work? 
+                p The tournament will have a double-elimination bracket. There will be an entry fee of $250 per team - 100% of proceeds not used for the event are donated to the nonprofit organization 
+                  a(href='http://villagecare.com' , target='_blank') Village Care 
+                  |to provide aid in the wake of the recent Ebola Outbreak in African Countries
+            .col-lg-4
+              p
+                b What should I bring? 
+                p Bring suntan lotion and your game face! Volleyballs will be provided! Please rep your company swag! Bring friends and family to come watch you play and enjoy the fun!
+            .col-lg-4
+              p
+                b Will refreshments be provided? 
+                p Light snacks and water will be provided to keep you fueled for the game!              
+            .col-lg-4
+              p
+                b What do we win?
+                p The winning team will be awarded a secret Grand Prize in addition to bragging rights to start off the Silicon Beach Sports season!
+            .col-lg-4
+              p
+                b Will there be an afterparty?
+                p All participants and viewers are invited to network and celebrate at the after party right down the street following the awards. A Grand Prize will be awarded to the winning team in addition to bragging rights. The afterparty will take place at Ocean Bar and Lounge, Sunday Beach House.               
+            .col-lg-4
+              p 
+                b What is Village Care International?
+                p Village Care International was created and operates from the unorthodox and highly effective standpoint that only Africans can solve their own problems by using the resources they have on hand and without dependence on humanitarian aid. We do that by equipping communities and their leaders with principles and practices that empower vulnerable populations to thrive. The results have been amazing with more than 1000 communities in 13 countries currently involved as members of Village Care.
 
     ////////////////
     /// PARTNERS ///
