@@ -252,15 +252,20 @@ video {
     color: #fffafa;
 }
 
-.btn-download {
-    height: 50px;
-    width: auto;
-    margin-top: -10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    border-radius: 7px;
-    opacity: 0.8;
-    transition: -webkit-filter, opacity .5s;    
+.subscribeConfirmation {
+    display: none;
+    position: relative;
+    height:50px;
+    top: 10px;
+    text-align: center;
+}
+
+.signupConfirmation {
+    display: none;
+    position: relative;
+    height:50px;
+    top: 10px;
+    text-align: center;
 }
 
 .btn-download:hover {

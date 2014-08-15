@@ -40,16 +40,22 @@ body
               h2.intro-text
                 | LA'S PREMIER SPORTS LEAGUE FOR STARTUPS
               
-              // mailchimp form   
-              form(action='/subscribe', method='post', name='email registration', target='_blank', style='margin-top:20px')
-                input.email(type='email', value='', name='EMAIL', placeholder='Subscribe to our mailing list...', required='required', style="margin: 0 auto; width:50%; border-color: rgba(255,255,255,0.75); border-width:3px")
-                // anti-spam
-                div(style='position: absolute; left: -5000px;')
-                  input(type='text', name='b_95fffc4eb179e8cedecfbc026_469fdeb0f2', value='')
-                .clear
+              // div container for fading elements
+              div(style='height:120px')
+                
+                // mailchimp form   
+                form.subscriptionForm(action='/subscribe', method='post', name='email registration', style='margin-top:20px')
+                  input.email(type='email', value='', name='EMAIL', placeholder='Subscribe to our mailing list...', required='required', style="margin: 0 auto; width:50%; border-color: rgba(255,255,255,0.75); border-width:3px")
+                  // anti-spam
+                  div(style='position: absolute; left: -5000px;')
+                    input(type='text', name='b_95fffc4eb179e8cedecfbc026_469fdeb0f2', value='')
+                  .clear
+                  br
+                  input.btn.btn-huge.button(type='submit', value='Subscribe', name='subscribe', style='width:200px' , onClick='$(".subscriptionForm").fadeOut(); $(".subscribeConfirmation").fadeIn()')
                 br
-                input.btn.btn-huge.button(type='submit', value='Subscribe', name='subscribe', style='width:200px')
-              br
+
+                .col-lg-12.subscribeConfirmation
+                  p Thanks for subscribing to our mailing list! You will receive a confirmation email shortly.                     
           .row
             ul.nav.navbar-nav
               //
@@ -86,17 +92,23 @@ body
           h3.section-subheading.white VOLLEYBALL TOURNAMENT
           p
             b.section-subheading August 24 | Hermosa Beach Pier, CA
-          p  
+          
+          // div container for fading elements
+          div(style='height:120px')
+
             // nodemailer form   
-            form(action='/signup', method='post', name='email registration', target='_blank', style='margin-top:20px')
+            form.signupForm(action='/signup', method='post', name='email registration', style='margin-top:20px')
               input.email(type='email', value='', name='EMAIL', placeholder='Enter Email Address...', required='required', style="margin: 0 auto; width:50%; border-color: rgba(255,255,255,0.75); border-width:3px")
               // anti-spam
               div(style='position: absolute; left: -5000px;')
                 input(type='text', name='b_95fffc4eb179e8cedecfbc026_469fdeb0f2', value='')
               .clear
               br
-              input.btn.btn-huge.button(type='submit', value='sign up', name='subscribe', style='width:200px')
+              input.btn.btn-huge.button(type='submit', value='sign up', name='subscribe', style='width:200px', onClick='$(".signupForm").fadeOut(); $(".signupConfirmation").fadeIn()')
             br
+
+            .col-lg-12.signupConfirmation
+              p Thanks for signing up! You'll contact you shortly with more details!                                
           br
           p
             b.section-subheading 8 Teams | 4 Players Per Team | $250 Entry Per Team
