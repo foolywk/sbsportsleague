@@ -63,7 +63,7 @@ a:focus {
 }
 
 .nav {
-    width: 320px;
+    width: 390px;
     display: block;
     margin-top: 0px;
     margin-right: auto;
@@ -370,7 +370,7 @@ video {
     border-top-color: #A0AFBB;
 }
 
-#about, #faq{
+#about, #faq, #contact{
     width: 100%;
     padding-top: 20px;
     padding-bottom: 40px;
@@ -382,7 +382,7 @@ video {
     font-size: 12pt;
 }
 
-#schedule, #partners, #contact {
+#schedule, #teams {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 40px;
